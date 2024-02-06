@@ -14,8 +14,101 @@
 
 // console.log(n.)
 
-function getMenu() {
- console.log("Burger, Pizza, Pasta");
+// function getMenu() {
+//  console.log("Burger, Pizza, Pasta");
+// }
+
+// getMenu()
+
+// for (var i = 0; i < 5; i++) {
+//     setTimeout(function () {
+//      console.log(i);
+//   }, 100);
+// }   
+
+// console.log(Math.pow(2, 3))
+
+// 1 to 100 ar modda bejor sonkha jog fol koto
+// let sum = 0;
+// for (let i = 0; i <= 100; i++) {
+//     if (i % 2 === 1) {
+
+//     }
+//     sum = i + sum
+// }
+// console.log(sum)
+
+// const jim = 10;
+// const kim = 150;
+// const tim = 15;
+
+// function bigNumber(numbers){
+//    if(jim>kim&&jim>tim){
+//     console.log('this is a big number', jim)
+//    }
+//  else  if(kim>jim&&kim>tim){
+//     console.log('this is a big number', kim)
+//    }
+//    if(tim>jim&&tim>kim){
+//     console.log('this is a big number', tim)
+//    }
+// }
+// const num= bigNumber()
+// console.log(num)
+// ----------------------------------------------------
+
+
+
+// function canpay(arr, totalDue) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         sum = sum + arr[i]
+//     }
+//     console.log(sum)
+//     if (sum >= totalDue) {
+//         return "true"
+//     }
+//     else {
+//         return "false"
+//     }
+// }
+
+// console.log(canpay([1, 5, 5], 10))
+
+
+// function canpay(arra, num) {
+// if(arra == 0){
+//     return "input a correct number"
+// }
+
+//     let sum = 0;
+//     for (let i = 0; i < arra.length; i++) {
+//         sum += arra[i]
+
+//     }
+//     console.log(sum)
+//     if (sum >= num) {
+//         return 'true'
+//     }
+//     return 'false'
+// }
+// let pay = canpay([0], 10)
+// console.log(pay)
+
+function height(inch) {
+    const feet = inch / 12;
+    const feetIn = parseInt(feet)
+    const vagshas = inch % 12;
+    const netHeight = feetIn + 'fit' + '. ' + vagshas + '. ' + 'inch';
+    return netHeight
+
 }
 
-getMenu()
+const result = height(75)
+console.log(result)
+
+function feet (inch2){
+    const result = inch2*1.60934;
+    return result
+}
+console.log(feet(24))
