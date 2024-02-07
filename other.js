@@ -95,20 +95,37 @@
 // let pay = canpay([0], 10)
 // console.log(pay)
 
-function height(inch) {
-    const feet = inch / 12;
-    const feetIn = parseInt(feet)
-    const vagshas = inch % 12;
-    const netHeight = feetIn + 'fit' + '. ' + vagshas + '. ' + 'inch';
-    return netHeight
+// function height(inch) {
+//     const feet = inch / 12;
+//     const feetIn = parseInt(feet)
+//     const vagshas = inch % 12;
+//     const netHeight = feetIn + 'fit' + '. ' + vagshas + '. ' + 'inch';
+//     return netHeight
 
+// }
+
+// const result = height(75)
+// console.log(result)
+
+// function feet (inch2){
+//     const result = inch2*1.60934;
+//     return result
+// }
+// console.log(feet(24))
+
+function canPay(arr, totalDue) {
+    if (arr == 0) {
+        return 'please input valid number '
+    }
+
+    let sum = 0;
+    for (let i of arr) {
+        sum = sum + i
+        console.log('first', sum)
+    }
+    if (sum >= totalDue) {
+        return "true"
+    } return 'false'
 }
+console.log(canPay([0], 10))
 
-const result = height(75)
-console.log(result)
-
-function feet (inch2){
-    const result = inch2*1.60934;
-    return result
-}
-console.log(feet(24))
