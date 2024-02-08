@@ -14,9 +14,6 @@ function calculateMoney(ticketSale) {
 }
 console.log(calculateMoney(10)) 
 
-
-
-
 function checkName(name) {
     if(typeof name !== "string"){
        return 'invalid'
@@ -42,7 +39,6 @@ console.log(deleteInvalids([1 , null, undefined, 18, -19, NaN, "12", [1, 2], { o
 
 
 
-
 function password(obj) {
     if (obj.birthYear.toString().length !== 4) {
         return "invalid"
@@ -50,10 +46,11 @@ function password(obj) {
     const name = obj.name
     const birthYear = obj.birthYear
     const siteName = obj.siteName
-    const result = name + '#' + birthYear + '@' + siteName
+    siteNameUppercase = siteName.charAt(0).toUpperCase() + siteName.slice(1);
+    const result = siteNameUppercase + '#' + name + '@' + birthYear
     return result
 }
-console.log(password({ name: '“kolimuddin”' , birthYear: 1999 , siteName: '“google”' }))
+console.log(password({ name: 'kolimuddin' , birthYear: 1999 , siteName: 'google' }))
 
 
 

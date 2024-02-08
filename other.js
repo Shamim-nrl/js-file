@@ -129,16 +129,29 @@
 // }
 // console.log(canPay([0], 10))
 
-function deleteInvalids(array) {
-    
-    if (!Array.isArray(array)) {
-        return 'Invalid Array';
+// function deleteInvalids(array) {
+
+//     if (!Array.isArray(array)) {
+//         return 'Invalid Array';
+//     }
+
+
+
+//         let arr = array.filter(name => typeof name === 'number' && !isNaN(name) )
+//         return arr
+// }
+// console.log(deleteInvalids({num: [ 1 , 2 , 3 ]} ))
+
+function password(obj) {
+    if (obj.birthYear.toString().length !== 4) {
+        return "invalid"
     }
- 
+    const name = obj.name
+    const birthYear = obj.birthYear
+    const siteName = obj.siteName
+    siteNameUppercase = siteName.charAt(0).toUpperCase() + siteName.slice(1);
+    const result = siteNameUppercase + '#' + name + '@' + birthYear
 
-    
-        let arr = array.filter(name => typeof name === 'number' && !isNaN(name) )
-        return arr
+    return result
 }
-console.log(deleteInvalids({num: [ 1 , 2 , 3 ]} ))
-
+console.log(password({ name: '“toky”' , birthYear: 200, siteName: '“Facebook”' } ))
