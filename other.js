@@ -113,19 +113,32 @@
 // }
 // console.log(feet(24))
 
-function canPay(arr, totalDue) {
-    if (arr == 0) {
-        return 'please input valid number '
-    }
+// function canPay(arr, totalDue) {
+//     if (arr == 0) {
+//         return 'please input valid number '
+//     }
 
-    let sum = 0;
-    for (let i of arr) {
-        sum = sum + i
-        console.log('first', sum)
+//     let sum = 0;
+//     for (let i of arr) {
+//         sum = sum + i
+//         console.log('first', sum)
+//     }
+//     if (sum >= totalDue) {
+//         return "true"
+//     } return 'false'
+// }
+// console.log(canPay([0], 10))
+
+function deleteInvalids(array) {
+    
+    if (!Array.isArray(array)) {
+        return 'Invalid Array';
     }
-    if (sum >= totalDue) {
-        return "true"
-    } return 'false'
+ 
+
+    
+        let arr = array.filter(name => typeof name === 'number' && !isNaN(name) )
+        return arr
 }
-console.log(canPay([0], 10))
+console.log(deleteInvalids({num: [ 1 , 2 , 3 ]} ))
 
