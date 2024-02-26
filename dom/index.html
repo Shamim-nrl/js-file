@@ -20,15 +20,7 @@
     </div>
 
 
-    <div id="text-container">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, sunt.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, adipisci aut.</p>
-    </div>
-    <div>
-        <textarea name="" id="textarea" cols="20" rows="3"></textarea>
-        <button id="post-but">post comment</button>
-    </div>
-
+  
 
     <script>
         //step: 1 add event listener to the post button
@@ -38,32 +30,13 @@
             const newComment = commentBox.value;
             // step:3 set the comment inside to post container
             const postContainer = document.getElementById('post-container')
-            const p = document.createElement('p')
+            const p = document.createElement('p');
             p.innerText = newComment;
             postContainer.appendChild(p)
 
             // step:4 clear to text area
             commentBox.value = '';
         })
-
-
-        document.getElementById('post-but').addEventListener('click', function () {
-            const textarea = document.getElementById('textarea')
-            const newText = textarea.value;
-
-            const textContainer = document.getElementById('text-container')
-            const p = document.createElement('p')
-            p. innerText = newText;
-            textContainer.appendChild(p)
-            textarea.value = '';
-
-
-
-        })
-
-
-
-
 
     </script>
 

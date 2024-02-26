@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        text-align: center;
+    }
+
+    .btn-plus {
+        padding: 5px 10px;
+        background-color: blueviolet;
+        border-radius: 5px;
+        color: white;
+
+    }
+
+    .btn-mainash {
+        padding: 5px 10px;
+        background-color: green;
+        border-radius: 5px;
+        color: white;
+    }
+</style>
+
+<body>
+
+
+    <div>
+        <h1>press plus button to count number</h1>
+        <h2 id="count">0</h2>
+        <button id="btn-plus" class="btn-plus">+</button>
+        <button id="btn-mainash" class="btn-mainash">-</button>
+    </div>
+
+
+
+    <script>
+        let sum = 0;
+        document.getElementById('btn-plus').addEventListener('click', function () {
+
+            const count = document.getElementById('count');
+            sum += 1
+            count.innerText=sum;
+        })
+        document.getElementById('btn-mainash').addEventListener('click', function(){
+            const count = document.getElementById('count');
+            sum -= 1
+            count.innerText=sum;
+        })
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

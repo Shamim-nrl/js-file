@@ -143,7 +143,7 @@
 // console.log(deleteInvalids({num: [ 1 , 2 , 3 ]} ))
 
 function password(obj) {
-    if (obj.birthYear.toString().length !== 4) {
+    if ((obj.birthYear.toString().length !== 4) || (Object.keys(obj).length!==3)) {
         return "invalid"
     }
     const name = obj.name
@@ -154,4 +154,4 @@ function password(obj) {
 
     return result
 }
-console.log(password({ name: '“toky”' , birthYear: 200, siteName: '“Facebook”' } ))
+console.log(password( {name: '“maisha”' , birthYear: 2002 }  ))

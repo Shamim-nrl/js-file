@@ -23,10 +23,7 @@ function checkName(name) {
         return 'Good Name'
     } return 'Bad Name'
 }
-console.log(checkName('Salman'))
-
-
-
+console.log(checkName(['Rashed'] ))
 
 function deleteInvalids(array) {
     if (!Array.isArray(array)) {
@@ -35,12 +32,10 @@ function deleteInvalids(array) {
     let arr = array.filter(name => typeof name === 'number' && !isNaN(name) )
     return arr
 }
-console.log(deleteInvalids([1 , null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }] ))
-
-
+console.log(deleteInvalids({num: [ 1 , 2 , 3 ]} ))
 
 function password(obj) {
-    if (obj.birthYear.toString().length !== 4) {
+    if ((obj.birthYear.toString().length !== 4) || (Object.keys(obj).length!==3)) {
         return "invalid"
     }
     const name = obj.name
@@ -50,9 +45,7 @@ function password(obj) {
     const result = siteNameUppercase + '#' + name + '@' + birthYear
     return result
 }
-console.log(password({ name: 'kolimuddin' , birthYear: 1999 , siteName: 'google' }))
-
-
+console.log(password({ name: '“toky”' , birthYear: 200, siteName: '“Facebook”' } ))
 
 function monthlySavings(arr, livingCost) {
     if (!Array.isArray(arr)) {
@@ -73,6 +66,12 @@ function monthlySavings(arr, livingCost) {
         return 'earn more'
     }return savings
 }
-console.log(monthlySavings(100, [ 900 , 2700 , 3400] ))
+console.log(monthlySavings([ 900 , 2700 , 3400] , 10000  ))
 
 // -------
+
+
+
+
+
+
