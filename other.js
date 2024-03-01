@@ -142,16 +142,21 @@
 // }
 // console.log(deleteInvalids({num: [ 1 , 2 , 3 ]} ))
 
-function password(obj) {
-    if ((obj.birthYear.toString().length !== 4) || (Object.keys(obj).length!==3)) {
-        return "invalid"
-    }
-    const name = obj.name
-    const birthYear = obj.birthYear
-    const siteName = obj.siteName
-    siteNameUppercase = siteName.charAt(0).toUpperCase() + siteName.slice(1);
-    const result = siteNameUppercase + '#' + name + '@' + birthYear
+// function password(obj) {
+//     if ((obj.birthYear.toString().length !== 4) || (Object.keys(obj).length!==3)) {
+//         return "invalid"
+//     }
+//     const name = obj.name
+//     const birthYear = obj.birthYear
+//     const siteName = obj.siteName
+//     siteNameUppercase = siteName.charAt(0).toUpperCase() + siteName.slice(1);
+//     const result = siteNameUppercase + '#' + name + '@' + birthYear
 
-    return result
-}
-console.log(password( {name: '“maisha”' , birthYear: 2002 }  ))
+//     return result
+// }
+// console.log(password( {name: '“maisha”' , birthYear: 2002 }  ))
+
+
+
+const stuInfo = JSON.stringify({ name: "James", roll: 3 }); 
+console.log(stuInfo.name); 
